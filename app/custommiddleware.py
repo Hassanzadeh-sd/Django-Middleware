@@ -11,5 +11,5 @@ class BaseMiddleware(object):
 
 class ProcessViewNoneMiddleware(BaseMiddleware):
     def process_view(self, request, view_func, view_args, view_kwargs):
-        print('processed view %s' % view_func.__name__)
+        print('----- Middleware view %s' % view_func.__name__)
         return None
